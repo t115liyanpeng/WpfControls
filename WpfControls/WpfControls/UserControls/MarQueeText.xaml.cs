@@ -36,40 +36,39 @@ namespace WpfControls.UserControls
             {
                 try
                 {
-                    width = Width - Block.ActualWidth;
-
-                    time = Math.Abs(width) / Speed;
-
                     #region<<滚动动画>>
 
-                    //获取字体大小
-                    double size = Block.FontSize;
-                    Body.Height = size * 2;
-                    //double fontwidth = Block.Text.Length * size;
-                    double fontwidth = GetFontSize(Block).Width;
-
-                    //Block.Width = fontwidth;
-                    if (MaxTextWidth < fontwidth)
+                //获取字体大小
+                double size = Block.FontSize;
+                //Body.Height = size * 2;
+                //double fontwidth = Block.Text.Length * size;
+                fontwidth = GetFontSize(Block).Width;
+                //Block.Width = fontwidth;
+                if (MaxTextWidth < fontwidth)
+                {
+                    //将要移动的长度
+                    double move = -(GetMoveLength(MaxTextWidth, fontwidth));
+                    time = Math.Abs(move)/Speed;
+                    moveAnimation = new DoubleAnimation
                     {
-                        //将要移动的长度
-                        double move = -(GetMoveLength(MaxTextWidth, fontwidth));
-                        moveAnimation = new DoubleAnimation
-                        {
-                            From = 0,
-                            To = move,
-                            Duration = TimeSpan.FromSeconds(time),
-                            RepeatBehavior = RepeatBehavior.Forever
-                        };
-                        Storyboard.SetTargetProperty(moveAnimation,
-                            new PropertyPath("(UIElement.RenderTransform).(TranslateTransform.X)"));
-                        Storyboard.SetTarget(moveAnimation, Block);
-                        Storyboard story = new Storyboard();
-                        story.Children.Add(moveAnimation);
+                        From = 0,
+                        To = move,
+                        Duration = TimeSpan.FromSeconds(time),
+                        RepeatBehavior = RepeatBehavior.Forever,
+                        DecelerationRatio = 0.9
+                    };
+                    Storyboard.SetTargetProperty(moveAnimation,
+                        new PropertyPath("(UIElement.RenderTransform).(TranslateTransform.X)"));
+                    Storyboard.SetTarget(moveAnimation, Block);
+                    //Storyboard story = new Storyboard();
+                    story.Children.Add(moveAnimation);
+                    if (fontwidth > MaxTextWidth)
+                    {
                         story.Begin();
                     }
+                }
 
-
-                    #endregion
+                #endregion
                 }
                 catch (Exception ex)
                 {
