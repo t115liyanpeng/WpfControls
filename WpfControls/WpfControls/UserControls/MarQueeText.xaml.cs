@@ -134,23 +134,7 @@ namespace WpfControls.UserControls
             {
                 return 0;
             }
-            if (stringlength > controllength)
-            {
-                double p = stringlength / controllength;
-
-                if (p <= 1)
-                {
-                    return controllength;
-                }
-
-
-                return controllength * (p) - controllength;
-
-            }
-            else
-            {
-                return controllength;
-            }
+             return stringlength - MaxTextWidth;
         }
 
         protected Size GetFontSize(TextBlock text)
