@@ -53,10 +53,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controls\IconButton.xaml.cs" />
     <Compile Include="Controls\LButton.xaml.cs" />
     <Compile Include="UserControls\MarQueeText.xaml.cs">
       <DependentUpon>MarQueeText.xaml</DependentUpon>
     </Compile>
+    <Page Include="Controls\IconButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\LButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -29,5 +29,9 @@
     <SolidColorBrush x:Key="L-Bg-Blue" Color="#1E9FFF"></SolidColorBrush>
     <SolidColorBrush x:Key="L-Bg-Black" Color="#393D49"></SolidColorBrush>
     <SolidColorBrush x:Key="L-Bg-Gray" Color="#EEEEEE"></SolidColorBrush>
+    
+    <Style x:Key="IconFont">
+        <Setter Property="TextElement.FontFamily" Value="/WpfControls;component/Resources/iconfont.ttf"/>
+    </Style>
 
 </ResourceDictionary>

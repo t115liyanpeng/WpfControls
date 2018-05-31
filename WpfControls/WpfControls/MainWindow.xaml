@@ -5,6 +5,8 @@
         Title="MainWindow" Height="350" Width="525">
     <Grid>
         <Button Visibility="Collapsed" Width="100" Height="30" Style="{StaticResource L-Btn-Danger}" IsEnabled="False">112</Button>
-        <controls:LButton Width="100" Height="30" Style="{StaticResource LButton-Parimy}" ButtonCorner="13" >1322</controls:LButton>
+        <controls:LButton Visibility="Collapsed" Width="100" Height="30" Style="{StaticResource LButton-Parimy}" ButtonCorner="13" >1322</controls:LButton>
+        <controls:IconButton Height="30" Width="100"></controls:IconButton>
+    
     </Grid>
 </Window>
