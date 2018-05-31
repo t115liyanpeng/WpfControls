@@ -13,13 +13,15 @@ namespace WpfControls.UserControls
     /// </summary>
     public partial class MarqueeText
     {
-
+        Storyboard story = new Storyboard();
 
         private DoubleAnimation moveAnimation;
 
         private double time = 1;
 
         private double width = 0;
+
+        private double fontwidth = 0;
 
         public MarqueeText()
         {

@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <!--主色-->
+    <SolidColorBrush x:Key="MainBase" Color="#009688"></SolidColorBrush>
+    <SolidColorBrush x:Key="MainCheckBase" Color="#5FB878"></SolidColorBrush>
+    <SolidColorBrush x:Key="MainNav" Color="#393D49"></SolidColorBrush>
+    <SolidColorBrush x:Key="MainColorful" Color="#1E9FFF"></SolidColorBrush>
+    
+    <!--场景色-->
+    <SolidColorBrush x:Key="Tip" Color="#FFB800"></SolidColorBrush>
+    <SolidColorBrush x:Key="Attract" Color="#FF5722"></SolidColorBrush>
+    <SolidColorBrush x:Key="TextOrLink" Color="#01AAED"></SolidColorBrush>
+    <SolidColorBrush x:Key="SideOrButtom" Color="#2F4056"></SolidColorBrush>
+
+    <!--背景、边框-->
+    <SolidColorBrush x:Key="SideLevel1" Color="#F0F0F0"></SolidColorBrush>
+    <SolidColorBrush x:Key="SideLevel2" Color="#f2f2f2"></SolidColorBrush>
+    <SolidColorBrush x:Key="SideLevel3" Color="#eeeeee"></SolidColorBrush>
+    <SolidColorBrush x:Key="SideLevel4" Color="#e2e2e2"></SolidColorBrush>
+    <SolidColorBrush x:Key="SideLevel5" Color="#dddddd"></SolidColorBrush>
+    <SolidColorBrush x:Key="SideLevel6" Color="#d2d2d2"></SolidColorBrush>
+    <SolidColorBrush x:Key="SideLevel7" Color="#c2c2c2"></SolidColorBrush>
+
+    <!--内置背景色-->
+    <SolidColorBrush x:Key="L-Bg-Red" Color="#FF5722"></SolidColorBrush>
+    <SolidColorBrush x:Key="L-Bg-Orange" Color="#FFB800"></SolidColorBrush>
+    <SolidColorBrush x:Key="L-Bg-Green" Color="#009688"></SolidColorBrush>
+    <SolidColorBrush x:Key="L-Bg-Cyan" Color="#2F4056"></SolidColorBrush>
+    <SolidColorBrush x:Key="L-Bg-Blue" Color="#1E9FFF"></SolidColorBrush>
+    <SolidColorBrush x:Key="L-Bg-Black" Color="#393D49"></SolidColorBrush>
+    <SolidColorBrush x:Key="L-Bg-Gray" Color="#EEEEEE"></SolidColorBrush>
+
+</ResourceDictionary>
