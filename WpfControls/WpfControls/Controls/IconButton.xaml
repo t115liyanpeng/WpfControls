@@ -5,23 +5,56 @@
         <ResourceDictionary Source="pack://application:,,,/WpfControls;component/Resources/BaseDictionary.xaml"></ResourceDictionary>
     </ResourceDictionary.MergedDictionaries>
 
+    <Storyboard x:Key="Iconbutton_story" FillBehavior="HoldEnd" >
+        <DoubleAnimation From="0.5" To="1" Duration="0:0:0.2" Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)" Storyboard.TargetName="IconTextBlock"></DoubleAnimation>
+        <DoubleAnimation From="0.5" To="1" Duration="0:0:0.2" Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)" Storyboard.TargetName="IconTextBlock"></DoubleAnimation>
+    </Storyboard>
 
     <Style TargetType="{x:Type local:IconButton}">
+        <Setter Property="Foreground" Value="{StaticResource SideLevel1}"></Setter>
+        <Setter Property="Background" Value="{StaticResource MainBase}"></Setter>
+        <Setter Property="FontSize" Value="15"></Setter>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:IconButton}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-                        <StackPanel Orientation="Horizontal" Background="{TemplateBinding Background}"
+                        <Grid  Background="{TemplateBinding Background}"
                                     HorizontalAlignment="Center"
-                                    VerticalAlignment="Center">
-                            <TextBlock Style="{StaticResource IconFont}" Text="&#xe67a;" Foreground="Black" FontSize="22"></TextBlock>
-                            <TextBlock></TextBlock>
-                        </StackPanel>
+                                    VerticalAlignment="Center"
+                                    >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+    <TextBlock x:Name="IconTextBlock" Style="{StaticResource IconFont}" Text="{TemplateBinding Icon}" Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" HorizontalAlignment="Center" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5">
+                                <TextBlock.RenderTransform>
+                                    <ScaleTransform ScaleX="1" ScaleY="1" ></ScaleTransform>
+                                    <!--<RotateTransform Angle="0"></RotateTransform>-->
+                                </TextBlock.RenderTransform>
+                            </TextBlock>
+                            <TextBlock Grid.Column="1" Text="{TemplateBinding Content}" Foreground="{TemplateBinding Foreground}"  FontSize="{TemplateBinding FontSize}" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{TemplateBinding FontFamily}"></TextBlock>
+                        </Grid>
                        
                     </Border>
+                    <ControlTemplate.Triggers>
+                        
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="0.7"></Setter>
+                        </Trigger>
+                        
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Opacity" Value="1"></Setter>
+                        </Trigger>
+                        
+                        <EventTrigger RoutedEvent="Click">
+                            <BeginStoryboard HandoffBehavior="SnapshotAndReplace" Storyboard="{StaticResource Iconbutton_story}"/>
+                        </EventTrigger>
+                        
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
+                
             </Setter.Value>
         </Setter>
     </Style>

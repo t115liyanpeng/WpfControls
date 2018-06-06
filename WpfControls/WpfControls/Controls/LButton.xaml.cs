@@ -60,28 +60,5 @@ namespace WpfControls.Controls
             get { return (CornerRadius)GetValue(ButtonCornerProperty); }
             set { SetValue(ButtonCornerProperty, value); }
         }
-
-        //protected override void OnPropertyChanged(DependencyPropertyChangedEventArgs e)
-        //{
-        //    base.OnPropertyChanged(e);
-        //    if (e.Property == ButtonCornerProperty)
-        //    {
-        //        //执行将border设为圆角
-        //        SetCorner(ButtonCorner);
-        //    }
-        //}
-
-        private void SetCorner(double corner)
-        {
-            try
-            {
-                Border border = this.ContentTemplate.FindName("border", this) as Border;
-                border.CornerRadius = new CornerRadius(corner);
-            }
-            catch (Exception ex)
-            {
-                Console.Write(ex);
-            }
-        }
     }
 }

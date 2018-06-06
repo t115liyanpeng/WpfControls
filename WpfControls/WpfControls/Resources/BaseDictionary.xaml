@@ -31,7 +31,7 @@
     <SolidColorBrush x:Key="L-Bg-Gray" Color="#EEEEEE"></SolidColorBrush>
     
     <Style x:Key="IconFont">
-        <Setter Property="TextElement.FontFamily" Value="/WpfControls;component/Resources/iconfont.ttf"/>
+        <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/WpfControls;component/Resources/#layui-icon"/>
     </Style>
 
 </ResourceDictionary>

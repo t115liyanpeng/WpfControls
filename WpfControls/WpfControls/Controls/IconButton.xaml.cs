@@ -50,5 +50,14 @@ namespace WpfControls.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(IconButton), new FrameworkPropertyMetadata(typeof(IconButton)));
         }
+
+        public static readonly DependencyProperty IconProperty = DependencyProperty.Register(
+            "Icon", typeof (string), typeof (IconButton), new PropertyMetadata("\ue614"));
+
+        public string Icon
+        {
+            get { return (string) GetValue(IconProperty); }
+            set { SetValue(IconProperty, value); }
+        }
     }
 }
