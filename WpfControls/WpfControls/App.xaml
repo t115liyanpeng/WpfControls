@@ -6,7 +6,8 @@
          <ResourceDictionary>
              <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/Style/ButtonStyle.xaml"></ResourceDictionary>
-             </ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Style/CheckBoxStyle.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
          </ResourceDictionary>
     </Application.Resources>
 </Application>
