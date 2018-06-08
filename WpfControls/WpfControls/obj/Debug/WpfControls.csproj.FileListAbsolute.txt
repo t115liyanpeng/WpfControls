@@ -46,3 +46,4 @@ C:\github\WpfControls\WpfControls\WpfControls\obj\Debug\Style\ButtonStyle.baml
 C:\github\WpfControls\WpfControls\WpfControls\obj\Debug\WpfControls.g.resources
 C:\github\WpfControls\WpfControls\WpfControls\obj\Debug\WpfControls.Properties.Resources.resources
 C:\github\WpfControls\WpfControls\WpfControls\obj\Debug\WpfControls.csproj.GenerateResource.Cache
+C:\github\WpfControls\WpfControls\WpfControls\obj\Debug\Style\RadioButtonStyle.baml

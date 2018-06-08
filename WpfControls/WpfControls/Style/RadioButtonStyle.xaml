@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+        <Storyboard x:Key="radio_story" FillBehavior="HoldEnd" >
+            <DoubleAnimation From="0.5" To="1" Duration="0:0:0.2" Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleX)" Storyboard.TargetName="icon"></DoubleAnimation>
+            <DoubleAnimation From="0.5" To="1" Duration="0:0:0.2" Storyboard.TargetProperty="(RenderTransform).(ScaleTransform.ScaleY)" Storyboard.TargetName="icon"></DoubleAnimation>
+        </Storyboard>
+    
+    <Style TargetType="RadioButton">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontSize" Value="15"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource L-Bg-Black}"/>
+        <Setter Property="Height" Value="25"></Setter>
+        <Setter Property="Width" Value="50"></Setter>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                        <TextBlock x:Name="icon" RenderTransformOrigin="0.5,0.5" FontSize="20" Style="{StaticResource IconFont}" Foreground="{StaticResource SideLevel6}" Text="&#xe63f;">
+                            <TextBlock.RenderTransform>
+                                <ScaleTransform></ScaleTransform>
+                            </TextBlock.RenderTransform>
+                        </TextBlock>
+                        <TextBlock x:Name="text"   Text="{TemplateBinding Content}" FontFamily="{TemplateBinding FontFamily}" FontSize="{TemplateBinding FontSize}" Foreground="{TemplateBinding Foreground}"/>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="icon" Property="Foreground" Value="{StaticResource MainCheckBase}"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="icon" Property="Text" Value="&#xe643;"></Setter>
+                            <Setter TargetName="icon" Property="Foreground" Value="{StaticResource MainCheckBase}"></Setter>
+                        </Trigger>
+                        <EventTrigger RoutedEvent="Click">
+                            <BeginStoryboard HandoffBehavior="SnapshotAndReplace" Storyboard="{StaticResource radio_story}"></BeginStoryboard>
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

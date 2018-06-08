@@ -7,6 +7,8 @@
         <Button Visibility="Collapsed" Width="100" Height="30" Style="{StaticResource L-Btn-Danger}" IsEnabled="False">112</Button>
         <controls:LButton Visibility="Collapsed" Width="100" Height="30" Style="{StaticResource LButton-Parimy}" ButtonCorner="13" >1322</controls:LButton>
         <controls:IconButton Visibility="Collapsed" Height="30" Width="100" Content="tess"></controls:IconButton>
-        <CheckBox Height="50" Width="100" FontSize="25" Content="写作" Style="{StaticResource LDefaultCheckBox}"></CheckBox>
+        <CheckBox Visibility="Collapsed" Height="50" Width="100"  Content="写作" ></CheckBox>
+        <RadioButton Height="25" Content="test"></RadioButton>
+        <RadioButton Height="23" Content="liyan" Margin="150,0,0,0"></RadioButton>
     </Grid>
 </Window>
