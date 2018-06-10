@@ -10,6 +10,7 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style x:Key="OptionMarkFocusVisual">
         <Setter Property="Control.Template">
             <Setter.Value>
@@ -19,7 +20,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+    <!--默认样式-->
     <Style x:Key="LDefaultCheckBox" TargetType="{x:Type CheckBox}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
         <Setter Property="Background" Value="{StaticResource SideLevel6}"/>
@@ -77,7 +78,46 @@
             </Setter.Value>
         </Setter>
     </Style>
-
+    <!--开关样式-->
+    <Style x:Key="LSwitch" TargetType="{x:Type CheckBox}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Background" Value="{StaticResource SideLevel1}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource SideLevel6}"/>
+        <Setter Property="Foreground" Value="{StaticResource SideLevel1}"/>
+        <Setter Property="Height" Value="25"></Setter>
+        <Setter Property="Width" Value="50"></Setter>
+        
+        <Setter Property="BorderThickness" Value="1"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type CheckBox}">
+                    <Border SnapsToDevicePixels="True" CornerRadius="{TemplateBinding Height, Converter={StaticResource CornerRadiusConvert}}" x:Name="rootBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid x:Name="contentGrid" VerticalAlignment="Center">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock x:Name="on" Visibility="Collapsed" FontSize="{TemplateBinding FontSize}" Margin="3,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Foreground="{StaticResource SideLevel1}">ON</TextBlock>
+                            <TextBlock x:Name="off" Grid.Column="1" FontSize="{TemplateBinding FontSize}" Margin="0,0,3,0" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="{StaticResource SideLevel6}">OFF</TextBlock>
+                            <TextBlock x:Name="point" Grid.Column="0" Margin="2" VerticalAlignment="Center" Foreground="{StaticResource SideLevel6}" FontSize="18" Style="{StaticResource IconFont}" Text="&#xe617;"></TextBlock>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="on"></Setter>
+                            <Setter Property="Grid.Column" Value="1" TargetName="point"></Setter>
+                            <Setter Property="Foreground" Value="{StaticResource SideLevel1}" TargetName="point"></Setter>
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="off"></Setter>
+                            <Setter Property="Background" Value="{StaticResource MainCheckBase}" TargetName="rootBorder"></Setter>
+                            <Setter Property="BorderBrush" Value="{StaticResource MainCheckBase}" TargetName="rootBorder"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--设置默认样式-->
+    <Style TargetType="CheckBox" BasedOn="{StaticResource LDefaultCheckBox}"></Style>
     
 
 </ResourceDictionary>

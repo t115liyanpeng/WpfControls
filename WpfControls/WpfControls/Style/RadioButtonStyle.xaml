@@ -33,7 +33,7 @@
                             <Setter TargetName="icon" Property="Text" Value="&#xe643;"></Setter>
                             <Setter TargetName="icon" Property="Foreground" Value="{StaticResource MainCheckBase}"></Setter>
                         </Trigger>
-                        <EventTrigger RoutedEvent="Click">
+                        <EventTrigger RoutedEvent="Checked">
                             <BeginStoryboard HandoffBehavior="SnapshotAndReplace" Storyboard="{StaticResource radio_story}"></BeginStoryboard>
                         </EventTrigger>
                     </ControlTemplate.Triggers>

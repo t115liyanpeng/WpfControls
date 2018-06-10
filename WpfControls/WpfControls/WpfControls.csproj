@@ -55,6 +55,7 @@
     </ApplicationDefinition>
     <Compile Include="Controls\IconButton.xaml.cs" />
     <Compile Include="Controls\LButton.xaml.cs" />
+    <Compile Include="Converts\CornerRadiusConvert.cs" />
     <Compile Include="UserControls\MarQueeText.xaml.cs">
       <DependentUpon>MarQueeText.xaml</DependentUpon>
     </Compile>
@@ -87,6 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Style\CheckBoxStyle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Style\ComboxStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:convert="clr-namespace:WpfControls.Converts">
     <!--主色-->
     <SolidColorBrush x:Key="MainBase" Color="#009688"></SolidColorBrush>
     <SolidColorBrush x:Key="MainCheckBase" Color="#5FB878"></SolidColorBrush>
@@ -30,8 +31,12 @@
     <SolidColorBrush x:Key="L-Bg-Black" Color="#393D49"></SolidColorBrush>
     <SolidColorBrush x:Key="L-Bg-Gray" Color="#EEEEEE"></SolidColorBrush>
     
+    <!--图标字体-->
     <Style x:Key="IconFont">
         <Setter Property="TextElement.FontFamily" Value="pack://application:,,,/WpfControls;component/Resources/#layui-icon"/>
     </Style>
-
+    
+    <!--转换器资源-->
+    <!--为始终保持圆角的转换器-->
+    <convert:CornerRadiusConvert x:Key="CornerRadiusConvert"></convert:CornerRadiusConvert>
 </ResourceDictionary>
