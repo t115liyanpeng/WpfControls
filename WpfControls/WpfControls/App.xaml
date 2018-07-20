@@ -8,6 +8,7 @@
                 <ResourceDictionary Source="pack://application:,,,/Style/ButtonStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/Style/CheckBoxStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/Style/RadioButtonStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/Style/ComboxStyle.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
          </ResourceDictionary>
     </Application.Resources>

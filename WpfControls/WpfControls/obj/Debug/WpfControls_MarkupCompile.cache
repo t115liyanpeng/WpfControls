@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\github\WpfControls\WpfControls\WpfControls\obj\Debug\
+E:\WpfControls\WpfControls\WpfControls\obj\Debug\
 WpfControls
 none
 false
 DEBUG;TRACE
-C:\github\WpfControls\WpfControls\WpfControls\App.xaml
-91345488795
+E:\WpfControls\WpfControls\WpfControls\App.xaml
+101949542457
 
 9-65861583
 12-1401562060
-Controls\IconButton.xaml;Controls\LButton.xaml;MainWindow.xaml;Resources\BaseDictionary.xaml;Style\ButtonStyle.xaml;Style\CheckBoxStyle.xaml;Style\RadioButtonStyle.xaml;Themes\Generic.xaml;UserControls\MarQueeText.xaml;
+Controls\IconButton.xaml;Controls\LButton.xaml;MainWindow.xaml;Resources\BaseDictionary.xaml;Style\ButtonStyle.xaml;Style\CheckBoxStyle.xaml;Style\ComboxStyle.xaml;Style\RadioButtonStyle.xaml;Themes\Generic.xaml;UserControls\MarQueeText.xaml;
 
 False
 
