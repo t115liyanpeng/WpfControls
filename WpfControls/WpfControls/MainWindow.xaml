@@ -10,10 +10,13 @@
         <CheckBox Visibility="Collapsed" Style="{StaticResource LSwitch}" Height="25" Width="50"   Content="写作" ></CheckBox>
         <RadioButton Visibility="Collapsed" Height="25" Content="test"></RadioButton>
         <RadioButton Visibility="Collapsed" Height="23" Content="liyan" Margin="150,0,0,0"></RadioButton>
-        <ComboBox Style="{StaticResource LDefaultComBox}" Width="150" Height="30">
+        <ComboBox Visibility="Visible" Style="{StaticResource LDefaultComBox}" Width="150" Height="30">
             <ComboBoxItem>1111</ComboBoxItem>
             <ComboBoxItem>2222</ComboBoxItem>
             <ComboBoxItem>3333</ComboBoxItem>
         </ComboBox>
+        <Menu  Style="{StaticResource LMenuStyle}">
+            <MenuItem Header="test"> tttt</MenuItem>
+        </Menu>
     </Grid>
 </Window>

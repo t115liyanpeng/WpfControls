@@ -49,3 +49,4 @@ E:\WpfControls\WpfControls\WpfControls\obj\Debug\WpfControls.csproj.GenerateReso
 E:\WpfControls\WpfControls\WpfControls\obj\Debug\WpfControls.exe
 E:\WpfControls\WpfControls\WpfControls\obj\Debug\WpfControls.pdb
 E:\WpfControls\WpfControls\WpfControls\obj\Debug\WpfControls.csprojResolveAssemblyReference.cache
+E:\WpfControls\WpfControls\WpfControls\obj\Debug\Style\MenuStyle.baml

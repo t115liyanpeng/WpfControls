@@ -3,13 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         <ResourceDictionary>
-             <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="pack://application:,,,/Style/ButtonStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/Style/CheckBoxStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/Style/RadioButtonStyle.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="pack://application:,,,/Style/ComboxStyle.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="pack://application:,,,/Style/MenuStyle.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
-         </ResourceDictionary>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

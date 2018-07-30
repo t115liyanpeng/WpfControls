@@ -86,7 +86,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ComboBoxItem">
                     <StackPanel Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" Orientation="Horizontal">
-                        <TextBlock Padding="3" Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding Content}"></TextBlock>
+                        <!--<TextBlock Padding="3" Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding Content}"></TextBlock>-->
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
